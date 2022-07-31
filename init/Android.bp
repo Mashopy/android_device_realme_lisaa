@@ -1,0 +1,12 @@
+prebuilt_etc {
+    name: "fstab.mt6895",
+    src: "fstab.mt6895",
+    vendor_ramdisk_available: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.mt6895.rc",
+    src: "init.recovery.mt6895.rc",
+    sub_dir: "init",
+    recovery: true,
+}
