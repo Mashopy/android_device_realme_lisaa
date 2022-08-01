@@ -50,15 +50,15 @@ BOARD_TAGS_OFFSET := 0x07c88000
 BOARD_RAMDISK_OFFSET := 0x26f08000
 BOARD_RAMDISK_USE_LZ4 := true
 
-BOARD_VENDOR_CMDLINE += \
+BOARD_KERNEL_CMDLINE += \
+    bootconfig \
     bootopt=64S3,32N2,64N2
 
 BOARD_MKBOOTIMG_ARGS += \
     --dtb_offset $(BOARD_TAGS_OFFSET) \
     --header_version $(BOARD_BOOT_HEADER_VERSION) \
     --ramdisk_offset $(BOARD_RAMDISK_OFFSET) \
-    --tags_offset $(BOARD_TAGS_OFFSET) \
-    --vendor_cmdline $(BOARD_VENDOR_CMDLINE)
+    --tags_offset $(BOARD_TAGS_OFFSET)
 
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
